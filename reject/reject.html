@@ -1,0 +1,35 @@
+<div class="oim-form" style="width:580px;">
+	<div class="oim-form_title">退回原因</div>
+	<div style="" class="oim-field">
+		<span style="margin-left:20px;" class="oim-field_textarea oim-field_wapper">
+			<textarea id="_field_reject_reason" style="width: 510px; height: 173px;" type="text" class="oim-field_el" value=""></textarea>
+		</span>
+	</div>
+	<div style="" class="oim-field">
+	    <span style="margin-left:20px;font-size:12px;width:350px;line-height: 28px;" class="oim-field_radio oim-field_wapper">
+           	<span value="appointo" style="" class="oim-field_el " name="rejectType">
+              	<em></em> 
+              	<label for="_field_reject_type3">退回（被退回对象再次提交后，将直接回到您所在节点）</label>
+          	</span>
+    	</span>
+    	<select id="targetTask" style="width:160px;font-size: 12px;">
+            <option>Slower</option>
+        </select>
+  		<span style="margin-left:20px;font-size:12px;width:452px;line-height: 28px;" class="oim-field_radio oim-field_wapper">
+        	<!--<span type="prev" style="" class="oim-field_el oim-field_radio_status-checked" name="rejectType" >-->
+         <!--     	<em></em> -->
+         <!--     	<label for="_field_reject_type1">退回上一步</label>-->
+         <!-- 	</span>-->
+         
+
+          	<span value="begin" style="" class="oim-field_el " name="rejectType">
+              	<em></em> 
+              	<label for="_field_reject_type2">退回发起人重走流程</label>
+          	</span>
+    	</span>
+	</div>
+	<div class="oim-form_btn-bar">
+		<button id="_rejectFormSubmitBtn" class="oim-btn">退回</button>
+		<button id="_rejectFormCloseBtn" class="oim-btn">关闭</button>
+	</div>
+</div>

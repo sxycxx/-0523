@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<page component="subpage" label="退回原因" actionOnClose="none" onLoad="onRejectPageLoaded" name="reject" target="_popupForm" width="600px" height="380px">
+  <action component="jsFunction" label="退回按钮" name="rejectBtn" renderto="#_rejectFormSubmitBtn" jsFuncName="onRejectBtnClick" autoRender="true"/>
+  <action component="jsFunction" label="关闭" name="rejectCloseBtn" jsFuncName="onRejectCloseBtnClick" renderto="#_rejectFormCloseBtn"/>
+  <dataset onLoad="onParentTaskDatasetLoaded" component="javaDataset" label="已完成的任务" name="parentTaskDataset" autoLoad="true" className="com.poweruniverse.nim.plateform.datasource.FinishedTask" primaryFieldName="liuChengJSDM" start="0" limit="0">
+    <properties component="properties">
+      <property component="simpleProperty" fieldType="int" label="代码" name="liuChengJSDM"/>
+      <property component="simpleProperty" fieldType="string" label="代号" name="caoZuoDH"/>
+      <property component="simpleProperty" fieldType="string" label="名称" name="caoZuoMC"/>
+    </properties>
+    <parameters component="parameters">
+      <parameter component="parameter" parameterType="string" label="系统代号" name="xiTongDH" value="${params.xiTongDH}"/>
+      <parameter component="parameter" parameterType="string" label="功能代号" name="gongNengDH" value="${params.gongNengDH}"/>
+      <parameter component="parameter" parameterType="string" label="主键值" name="dataId" value="${params.dataId}"/>
+    </parameters>
+  </dataset>
+</page>
